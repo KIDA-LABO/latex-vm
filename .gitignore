@@ -12,5 +12,8 @@
 ### Vagrant Patch ###
 *.box
 workspace/*
+settings/*
+extensions/*
+code-server/*
 
 # End of https://www.gitignore.io/api/vagrant

@@ -121,5 +121,5 @@ function texc() {
 }
 
 function code-server() {
-  docker run -it --detach -p 8080:8080 -v /vagrant/workspace:/home/coder/code-server codercom/code-server:latest code-server --auth none
+  docker run -it --detach -p 8080:8080 -v /vagrant/workspace:/home/coder/code-server -v /vagrant/code-server:/home/coder/.local/share/code-server codercom/code-server:latest code-server --auth none
 }

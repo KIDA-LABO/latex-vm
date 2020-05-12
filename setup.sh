@@ -15,4 +15,4 @@ sudo docker pull paperist/alpine-texlive-ja
 ln -s /vagrant/workspace ~
 
 cp /vagrant/.bashrc ~/.bashrc
-source .bashrc
+# source .bashrc
