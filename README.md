@@ -7,7 +7,7 @@
 
 ## 使用技術
 
-- Virtual Box: 6.0.20 r137117
+- Virtual Box: 6.1.6 r137129
 - Vagrant: 2.2.9
 - Docker
   - codercom/code-server:latest
