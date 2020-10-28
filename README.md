@@ -28,6 +28,11 @@ code-server上でのワークスペースとなります。
 code-serverの設定ファイルが入っているフォルダです。  
 基本的にこのフォルダを操作することはありません。
 
+## 注意点
+
+Vagrantの共有フォルダが利用できる環境でのみ利用してください。  
+
+
 ## 初期設定
 
 初回のVM構築時のみ、以下の作業を行ってください。
@@ -46,15 +51,26 @@ vagrant ssh
 
 ### ライブラリ等のインストール
 
+まず、 `/vagrant` フォルダに移動します。
+
 ```
-bash /vagrant/setup.sh
+cd /vagrant
+```
+
+以下のコマンドを入力することで初期設定が始まります。
+
+```
+./setup.sh
 ```
 
 上記のコマンドの実行が終わったら一度ログアウトして再度ログインします。  
 その後以下のコマンドを実行します。
 
 ```
-bash /vagrant/extension.sh
+exit
+vagrant reload
+vagrant ssh
+./extension.sh
 ```
 
 ## 使い方
@@ -79,7 +95,7 @@ vagrant ssh
 code-server
 ```
 
-`http://localhost:8080`にアクセスするとエディタが開かれます。
+`http://localhost:10000`にアクセスするとエディタが開かれます。
 
 ### texファイルのコンパイル
 
@@ -89,4 +105,4 @@ texファイルをコンパイルするとpdfファイルが生成できます�
 texc texファイル
 ```
 
-生成されたpdfファイルは`/workspace`に存在するのでホスト側で開いて確認してください。
+生成されたpdfファイルは`/vagrant/workspace`に存在するのでホスト側で開いて確認してください。
