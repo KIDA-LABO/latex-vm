@@ -64,12 +64,13 @@ cd /vagrant
 ```
 
 上記のコマンドの実行が終わったら一度ログアウトして再度ログインします。  
-その後以下のコマンドを実行します。
+その後以下のコマンドを実行します。(再起動してextension.shを実行)
 
 ```
 exit
 vagrant reload
 vagrant ssh
+cd /vagrant
 ./extension.sh
 ```
 
